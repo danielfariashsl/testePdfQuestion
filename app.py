@@ -44,7 +44,7 @@ def main():
       if user_question:
         docs = knowledge_base.similarity_search(user_question)
         
-        llm = OpenAI(openai_api_key="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")
+        llm = OpenAI(openai_api_key="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")
         chain = load_qa_chain(llm, chain_type="stuff")
         with get_openai_callback() as cb:
           response = chain.run(input_documents=docs, question=user_question)
